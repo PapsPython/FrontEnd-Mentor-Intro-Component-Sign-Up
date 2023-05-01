@@ -1,0 +1,162 @@
+:root{
+  --primary-blue-color:hsl(246, 25%, 40%);
+  --primary-darkblue-color:hsl(249, 10%, 26%);
+  --primary-green-color:hsl(154, 59%, 51%);
+  --primary-red-color: hsl(0, 100%, 74%);
+  --font-size:16px;
+}
+
+html,body {
+  height: 100vh;
+  width: 100%;
+  background-image: url("images/bg-intro-desktop.png");
+  background-repeat:no-repeat;
+  background-color:var(--primary-red-color);
+  background-size: cover;
+  margin:0;
+  padding:0;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size:var(--font-size);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+ -webkit-box-sizing:border-box;
+}
+
+button,input{
+  font-family:inherit;
+  display:block;
+  margin:0px 1.2em;
+  padding: 0.8em;
+  border-radius:3px;
+  border:1px solid gray;
+  transition: 0.5s ease cubic-bezier(.17,.67,1,.37)
+}
+
+/*layout*/
+main{
+  display:flex;
+  flex-direction: column;
+  gap:0.2em;
+}
+
+.introtext,
+p:first-child,
+.introform
+{
+max-width:400px;
+ width:90%;
+ height: auto;
+ margin: 1em auto; 
+}
+
+.introtext{
+  align-self: center;
+  }
+
+
+/*typography*/
+p:first-child{
+   background-color: var(--primary-blue-color);
+  text-align: center;
+  padding:0.8em 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px hsl(0, 0%, 83%,0.3);
+}
+
+
+#signup{
+  background-color: white;
+  border-radius: 4px;
+  display: grid;
+  padding-top:1.2em;
+  gap:0.7em;
+  box-shadow: 0px 10px 10px hsl(0, 0%, 83%,0.3);
+}
+
+#signup p{
+  margin: 0 1.5em 1.2em;
+}
+
+#signup div{
+  display: grid;
+}
+
+.introform p{
+  font-size: 0.5rem;
+}
+
+.terms,
+.introform p{
+ font-weight: 600;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.errbackground{
+  background-image:url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-origin:content-box;
+  background-position:right;
+  background-size:30px;
+  border: 2px solid var(--primary-red-color);
+ }
+
+
+ #signup button{
+   background-color:var(--primary-green-color);
+   border:none; 
+   box-shadow: 2px 2px 3px black;
+   text-transform: uppercase;
+   color: white;
+ }
+
+#signup:last-child p{
+  color:black;
+  font-weight: 200;
+}
+
+#signup:last-child p,
+.price{
+  font-weight:200;
+}
+
+small{
+  font-size:0.5rem;
+  color:red;
+  margin:0 2em 0 0;
+  justify-self:right;
+ }
+
+/*utility*/
+ .terms{
+   color:var(--primary-red-color);
+ }
+
+ button:hover{
+   cursor: pointer;
+ }  
+
+@media screen and (min-width:600px){
+  main{
+    flex-direction: row;
+    gap:4em;
+  }
+}
+
+
+
+
+
